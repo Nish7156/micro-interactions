@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { ReloadIcon } from "@radix-ui/react-icons";
 import { IconLoader2 } from "@tabler/icons-react";
+import { MarqueeTestimonials } from "@/components/customUi/MarqueeTestimonials";
+import { AnimatedListDemo } from "@/components/customUi/AnimatedListDemo";
 
 export default function Home() {
   const words = `Oxygen gets you high. In a catastrophic emergency, we're taking giant, panicked breaths. Suddenly you become euphoric, docile. You accept your fate. It's all right here. Emergency water landing, six hundred miles an hour. Blank faces, calm as Hindu cows
@@ -35,6 +37,10 @@ export default function Home() {
         <IconLoader2 className="mr-2 h-4 w-4 animate-spin" />
           Loading
         </Button>
+        <div className="my-10"></div>
+        <MarqueeTestimonials/>
+        <div className="my-10"></div>
+        <AnimatedListDemo/>
         <div className="my-10"></div>
       </div>
     </>
