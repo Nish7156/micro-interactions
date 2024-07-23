@@ -4,6 +4,7 @@ import { SignupForm } from "@/components/pages/SIgnUpForm.tsx";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { ReloadIcon } from "@radix-ui/react-icons";
+import { IconLoader2 } from "@tabler/icons-react";
 
 export default function Home() {
   const words = `Oxygen gets you high. In a catastrophic emergency, we're taking giant, panicked breaths. Suddenly you become euphoric, docile. You accept your fate. It's all right here. Emergency water landing, six hundred miles an hour. Blank faces, calm as Hindu cows
@@ -31,7 +32,7 @@ export default function Home() {
         <TextGenerateEffect words={words} />
         <div className="my-10"></div>
         <Button disabled>
-          <ReloadIcon className="mr-2 h-4 w-4 animate-spin" />
+        <IconLoader2 className="mr-2 h-4 w-4 animate-spin" />
           Loading
         </Button>
         <div className="my-10"></div>
