@@ -70,3 +70,7 @@
 body {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out !important;
 }
+
+.container {
+  @apply max-w-7xl w-full mx-auto px-5;
+}

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/context/theme-provider";
+import Header from "@/components/pages/Layout/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 const APP_NAME = "PWA App";
@@ -60,6 +61,7 @@ export default function RootLayout({
           disableTransitionOnChange
           
         >
+          <Header/>
           <main>{children}</main>
         </ThemeProvider>
       </body>
