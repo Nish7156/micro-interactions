@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/context/theme-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 const APP_NAME = "PWA App";
@@ -50,9 +51,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} light`}>
-        <main>{children}</main>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+          
+        >
+          <main>{children}</main>
+        </ThemeProvider>
       </body>
     </html>
   );
