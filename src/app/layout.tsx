@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/context/theme-provider";
 import Header from "@/components/pages/Layout/Header";
+import { DockDemo } from "@/components/pages/Layout/DockDemo";
 
 const inter = Inter({ subsets: ["latin"] });
 const APP_NAME = "PWA App";
@@ -59,10 +60,14 @@ export default function RootLayout({
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
-          
         >
-          <Header/>
-          <main>{children}</main>
+          <Header />
+          <main className=" relative">
+            {children}
+            <div className=" fixed right-5 bottom-8">
+              <DockDemo />
+            </div>
+          </main>
         </ThemeProvider>
       </body>
     </html>
