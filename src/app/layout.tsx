@@ -64,7 +64,7 @@ export default function RootLayout({
           <Header />
           <main className=" relative">
             {children}
-            <div className=" fixed right-5 bottom-8">
+            <div className=" sm:block hidden fixed right-5 bottom-8">
               <DockDemo />
             </div>
           </main>

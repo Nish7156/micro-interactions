@@ -8,13 +8,15 @@ import { IconLoader2 } from "@tabler/icons-react";
 import { MarqueeTestimonials } from "@/components/customUi/MarqueeTestimonials";
 import { AnimatedListDemo } from "@/components/customUi/AnimatedListDemo";
 import { ModeToggle } from "@/components/utility/ModeToggle";
+import HeroSection from "@/components/pages/Home/HeroSection";
+import { AnimatedModalDemo } from "@/components/pages/Home/AnimatedModalDemo";
 
 export default function Home() {
   const words = `Oxygen gets you high. In a catastrophic emergency, we're taking giant, panicked breaths. Suddenly you become euphoric, docile. You accept your fate. It's all right here. Emergency water landing, six hundred miles an hour. Blank faces, calm as Hindu cows
 `;
   return (
     <>
-      <div className="mx-auto max-w-lg w-full py-20">
+      {/* <div className="mx-auto max-w-lg w-full py-20">
         <PinContainer
           title="/ui.aceternity.com"
           href="https://twitter.com/mannupaaji"
@@ -44,6 +46,17 @@ export default function Home() {
         <AnimatedListDemo/>
         <ModeToggle/>
         <div className="my-10"></div>
+      </div> */}
+      <div className="container py-4">
+        <HeroSection/>
+        <div className="grid grid-cols-3">
+          <div className="">d</div>
+          <div className="">1</div>
+          <div className="">
+          <AnimatedListDemo/>
+          </div>
+        </div>
+        <AnimatedModalDemo/>
       </div>
     </>
   );

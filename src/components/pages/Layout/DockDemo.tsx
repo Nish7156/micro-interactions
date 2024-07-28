@@ -1,6 +1,12 @@
 import React from "react";
 import Link from "next/link";
-import { CalendarIcon, HomeIcon, MailIcon, PencilIcon } from "lucide-react";
+import {
+  CalendarIcon,
+  HomeIcon,
+  Icon,
+  MailIcon,
+  PencilIcon,
+} from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
@@ -13,6 +19,7 @@ import {
 } from "@/components/ui/tooltip";
 import { Dock, DockIcon } from "@/components/magicui/dock";
 import { ModeToggle } from "@/components/utility/ModeToggle";
+import SystemIcon from "@/icons/SystemIcon";
 // import { ModeToggle } from "@/components/mode-toggle";
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
@@ -78,16 +85,16 @@ const DATA = {
         url: "#",
         icon: Icons.linkedin,
       },
-      X: {
-        name: "X",
-        url: "#",
-        icon: Icons.x,
-      },
-      email: {
-        name: "Send Email",
-        url: "#",
-        icon: Icons.email,
-      },
+      // X: {
+      //   name: "X",
+      //   url: "#",
+      //   icon: Icons.x,
+      // },
+      // email: {
+      //   name: "Send Email",
+      //   url: "#",
+      //   icon: Icons.email,
+      // },
     },
   },
 };
@@ -140,9 +147,11 @@ export function DockDemo() {
         <Separator orientation="vertical" className="h-full py-2" />
         <DockIcon>
           <Tooltip>
-            <TooltipTrigger asChild>mode</TooltipTrigger>
+            <TooltipTrigger asChild>
+              <ModeToggle />
+            </TooltipTrigger>
             <TooltipContent>
-              <p>Theme</p>
+              <p>Mode</p>
             </TooltipContent>
           </Tooltip>
         </DockIcon>
