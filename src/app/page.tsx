@@ -48,10 +48,12 @@ export default function Home() {
         <ModeToggle/>
         <div className="my-10"></div>
       </div> */}
-      <div className="">
+      <div className=" container">
         <HeroSection />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          <div className="">d</div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-2">
+          <div className="">
+          <MarqueeTestimonials/>
+          </div>
           <div className="">
             <Button>
           
