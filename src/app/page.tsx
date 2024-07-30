@@ -10,6 +10,7 @@ import { AnimatedListDemo } from "@/components/customUi/AnimatedListDemo";
 import { ModeToggle } from "@/components/utility/ModeToggle";
 import HeroSection from "@/components/pages/Home/HeroSection";
 import { AnimatedModalDemo } from "@/components/pages/Home/AnimatedModalDemo";
+import { Loader } from "lucide-react";
 
 export default function Home() {
   const words = `Oxygen gets you high. In a catastrophic emergency, we're taking giant, panicked breaths. Suddenly you become euphoric, docile. You accept your fate. It's all right here. Emergency water landing, six hundred miles an hour. Blank faces, calm as Hindu cows
@@ -47,16 +48,21 @@ export default function Home() {
         <ModeToggle/>
         <div className="my-10"></div>
       </div> */}
-      <div className="container py-4">
-        <HeroSection/>
-        <div className="grid grid-cols-3">
+      <div className="">
+        <HeroSection />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           <div className="">d</div>
-          <div className="">1</div>
           <div className="">
-          <AnimatedListDemo/>
+            <Button>
+          
+              Loading
+            </Button>
+          </div>
+          <div className="">
+            <AnimatedListDemo />
           </div>
         </div>
-        <AnimatedModalDemo/>
+        <AnimatedModalDemo />
       </div>
     </>
   );
